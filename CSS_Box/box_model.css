@@ -1,0 +1,56 @@
+div {
+}
+
+body {
+  background-color: #ffff00
+}
+h1 {
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%; 
+}
+
+.title {
+  display: flex;
+  justify-content: center; 
+}
+
+.block {
+  overflow: hidden;
+  padding: 10px;
+  margin-top: 10px;
+  height: auto;
+  background-color: lightblue;  
+  border-radius: 10px;
+} 
+
+
+#first-div {
+  background-color: #39cccc;
+  width: auto;
+  height: auto;
+  /* align-content: center; */
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+#second-div {
+  background-color: #ff4136;
+}
+
+ img {
+  border: 3px solid red; 
+}
+
+p {
+  display: flex;
+  background-color: #7fdbff;
+  border-radius: 10px;
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%; 
+  justify-content: space-around;
+}

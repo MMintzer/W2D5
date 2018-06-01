@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>The Box Model</title>
+    <link rel="stylesheet" href="./box_model.css" />
+  </head>
+  <body>
+    <h1> 
+      <div class="title">
+          This is header our liquid cat. He is amazing.
+      </div>
+      <img src="https://www.clipweekend.com/image/funny-cats-203-05.jpg" alt="Liquid Cat ftw Hoorah">
+    </h1> 
+    <div id="first-div">
+    
+      <p> "This is Paragraph Hoorah" </p>
+    </div>
+    
+    
+      <div id="second-div"></div>
+    <div class="block">
+      This is our block. It is below our liquid cat. 
+      Player assigns the name
+    Failure/Error: expect(player.name).to eq("Nick the Greek")
+      
+      expected: "Nick the Greek"
+           got: nil
+      
+      (compared using ==)
+    # ./spec/player_spec.rb:9:in `block (2 levels) in <top (required)>'
+
+ 2) Player assigns the bankroll
+    Failure/Error: expect(player.bankroll).to eq(200_000)
+      
+      expected: 200000
+           got: nil
+      
+      (compared using ==)
+    # ./spec/player_spec.rb:12:in `block (2 levels) in <top (required)>'
+
+ 3) Player#pay_winnings adds to winnings
+    Failure/Error: expect(player.bankroll).to eq(200_200)
+      
+      expected: 200200
+           got: nil
+      
+      (compared using ==)
+    # ./spec/player_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+ 4) Player#return_cards returns player's cards to the deck
+    Failure/Error: expect(hand).to receive(:return_cards).with(deck)
+      (Double "hand").return_cards(#<RSpec::Mocks::Double:0x3ff04bd4a230 @name="deck">)
+          expected: 1 time with arguments: (#<RSpec::Mocks::Double:0x3ff04bd4a230 @name="deck">)
+          received: 0 times
+    # ./spec/player_spec.rb:30:in `block (3 levels) in <top (required)>'
+
+ 5) Player#return_cards resets hand to nil
+    Failure/Error: expect(player.hand).to be_nil
+      expected: nil
+           got: #<RSpec::Mocks::Double:0x3ff04bd03ab0 @name="hand">
+    # ./spec/player_spec.rb:36:in `block (3 levels) in <top (required)>'
+
+ 6) Player#place_bet registers bet with dealer
+    Failure/Error: expect(dealer).to receive(:take_bet).with(player, 10_000)
+      (Double "dealer").take_bet(#<Player:0x007fe0979d5a88>, 10000)
+          expected: 1 time with arguments: (#<Player:0x007fe0979d5a88>, 10000)
+          received: 0 times
+    # ./spec/player_spec.rb:44:in `block (3 levels) in <top (required)>'
+
+ 7) Player#place_bet deducts bet from bankroll
+    Failure/Error: expect(player.bankroll).to eq(190_000)
+      
+      expected: 190000
+           got: nil
+      
+      (compared using ==)
+    # ./spec/player_spec.rb:50:in `block (3 levels) in <top (required)>'
+
+ 8) Player#place_bet enforces limits
+    Failure/Error: expect do
+      expected Exception with "player can't cover bet" but nothing was raised
+    # ./spec/player_spec.rb:54:in `block (3 levels) in <top (required)>'
+
+Finished in 0.01679 seconds (files took 0.14765 seconds to load)
+8 examples, 8 failures
+
+Failed examples:
+
+rspec ./spec/player_spec.rb:8 # Player assigns the name
+rspec ./spec/player_spec.rb:11 # Player assigns the bankroll
+rspec ./spec/player_spec.rb:16 # Player#pay_winnings adds to winnings
+rspec ./spec/player_spec.rb:29 # Player#return_cards returns player's cards to the deck
+rspec ./spec/player_spec.rb:34 # Player#return_cards resets hand to nil
+rspec ./spec/player_spec.rb:43 # Player#place_bet registers bet with dealer
+rspec ./spec/player_spec.rb:48 # Player#place_bet deducts bet from bankroll
+rspec ./spec/player_spec.rb:53 # Player#place_bet enforces limits
+☀ ~/Desktop/firstname_lastname_a02p$ 
+
+    </div>
+    <p></p>
+  </body>
+</html>
+
