@@ -45,7 +45,6 @@ h1 {
 }
 
 p {
-  display: flex;
   background-color: #7fdbff;
   border-radius: 10px;
   display: block; 
@@ -53,4 +52,5 @@ p {
   margin-right: auto;
   width: 40%; 
   justify-content: space-around;
+  display: flex;
 }
