@@ -9,18 +9,35 @@ class HashMap
   end
 
   def include?(key)
+    hash_key = key.hash 
+    mod_key = hash_key % num_buckets 
+    @store[mod_key].include?(key)  
   end
 
   def set(key, val)
+    return if include?(key) 
+    hash_key = key.hash 
+    mod_key = hash_key % num_buckets 
+    @store[mod_key].append(key, val) 
+    @count += 1  
   end
 
   def get(key)
+    hash_key = key.hash 
+    mod_key = hash_key % num_buckets 
+    @store[mod_key].get(key) 
   end
 
   def delete(key)
+    return unless include?(key)  
+    hash_key = key.hash 
+    mod_key = hash_key % num_buckets 
+    @store[mod_key].remove(key) 
+    @count -= 1
   end
 
-  def each
+  def each(&prc)
+    
   end
 
   # uncomment when you have Enumerable included
@@ -41,6 +58,9 @@ class HashMap
   end
 
   def resize!
+    new_buckets = num_buckets * 2
+    new_arr = Array.new(num_buckets) {LinkedList.new} 
+    
   end
 
   def bucket(key)

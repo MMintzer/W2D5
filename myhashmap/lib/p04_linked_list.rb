@@ -64,7 +64,7 @@ class LinkedList
     end 
   end
 
-  def include?(key, &prc)
+  def include?(key) 
     return false if empty?
     
     self.each do |node|
